@@ -39,7 +39,7 @@ def fetch_nasa_power_data(latitude, longitude, start_date, end_date):
 def llm3(query):
     parameters = {
         "max_new_tokens": 100,
-        "temperature": 0.2,
+        "temperature": 0.1,
         "top_k": 50,
         "top_p": 0.95,
         "return_full_text": False,
@@ -63,7 +63,7 @@ def llm3(query):
 def llm2(query):
     parameters = {
         "max_new_tokens": 100,
-        "temperature": 0.6,
+        "temperature": 0.7,
         "top_k": 50,
         "top_p": 0.95,
         "return_full_text": False,
@@ -87,7 +87,7 @@ def llm2(query):
 def llm(query):
     parameters = {
         "max_new_tokens": 100,
-        "temperature": 0.01,
+        "temperature": 0.002,
         "top_k": 50,
         "top_p": 0.95,
         "return_full_text": False,
