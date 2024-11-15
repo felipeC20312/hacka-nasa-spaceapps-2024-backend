@@ -8,7 +8,7 @@ from modules.agriculture_forecast import process_agricultural_forecasting
 app = Flask(__name__)
 swagger = Swagger(app)
 
-allowed_origins = ["http://localhost:5173", "https://orusapp-backend-iqmm.onrender.com"]
+allowed_origins = ["http://localhost:5173", "https://orusapp.netlify.app"]
 CORS(app, resources={r"/*": {"origins": allowed_origins}})
 
 
