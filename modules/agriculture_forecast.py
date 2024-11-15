@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 url = os.getenv("API_URL")
-token = os.getenv("GPT_TOKEN")
+token = os.getenv("HUGGINGFACE_TOKEN")
 
 parameter_names = {
     "RH2M": "Relative Humidity at 2m",
@@ -39,7 +39,7 @@ def fetch_nasa_power_data(latitude, longitude, start_date, end_date):
 def llm3(query):
     parameters = {
         "max_new_tokens": 100,
-        "temperature": 0.4,
+        "temperature": 0.2,
         "top_k": 50,
         "top_p": 0.95,
         "return_full_text": False,
@@ -63,7 +63,7 @@ def llm3(query):
 def llm2(query):
     parameters = {
         "max_new_tokens": 100,
-        "temperature": 0.7,
+        "temperature": 0.6,
         "top_k": 50,
         "top_p": 0.95,
         "return_full_text": False,

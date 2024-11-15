@@ -1,11 +1,15 @@
 import json
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from flasgger import Swagger
 from modules.consultajson import manipula_json
 from modules.agriculture_forecast import process_agricultural_forecasting
 
 app = Flask(__name__)
 swagger = Swagger(app)
+
+allowed_origins = ["http://localhost:5173", "https://orusapp-backend-iqmm.onrender.com"]
+CORS(app, resources={r"/*": {"origins": allowed_origins}})
 
 
 @app.route("/")
